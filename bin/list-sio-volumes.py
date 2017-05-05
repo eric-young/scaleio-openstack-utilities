@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+#
+# list openstack volumes and their correspondng ScaleIO volumes
+#
+# requires two pip modules to be installed via pip:
+#     openstacksdk
+#     siolib
+#
 
 import argparse
 import base64
