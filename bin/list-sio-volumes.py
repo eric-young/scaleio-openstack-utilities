@@ -39,6 +39,8 @@ class VolumeLister:
                             help='OpenStack User')
         parser.add_argument('--os_pass', dest='OS_PASS', action='store', required=True,
                             help='OpenStack Password')
+        parser.add_argument('--os_all_tenants', dest='OS_ALL_TENANTS', action='store_true',
+                            default='False', help='Show volumes from all tenants')
 
         # scaleio configuration
         parser.add_argument('--sio_gateway', dest='SIO_GATEWAY', action='store', required=True,
@@ -83,7 +85,8 @@ class VolumeLister:
 
     def list_volumes(self):
         print(self.format_string % ("OpenStack Volume", "ScaleIO Volume", "Attached"))
-        for os_volume in self.openstack.block_store.volumes(details=True, all_tenants=True):
+        for os_volume in self.openstack.block_store.volumes(details=True,
+                                                            all_tenants=self.args.OS_ALL_TENANTS):
             sio_volume = self._convert_os_to_sio(os_volume.id)
             try:
                 self.scaleio._volume(sio_volume)
