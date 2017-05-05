@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# list openstack volumes and their correspondng ScaleIO volumes
+# list openstack volumes and their corresponding ScaleIO volumes
 #
 # requires two pip modules to be installed via pip:
 #     openstacksdk
@@ -13,6 +13,7 @@ import binascii
 from openstack import connection
 from siolib import ScaleIO
 import six
+
 
 class VolumeLister:
     """A simple example class"""
