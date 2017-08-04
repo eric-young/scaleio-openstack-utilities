@@ -16,6 +16,11 @@ import requests
 import six
 from urllib import quote
 
+try:
+    # only valid for requests v2.7 or greater
+    requests.packages.urllib3.disable_warnings()  # disable warnings
+except:
+    pass
 
 class SIOWrapper:
     gateway_address = None
