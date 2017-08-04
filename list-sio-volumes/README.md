@@ -2,6 +2,8 @@
 
 Utility to list the mappings between OpenStack and ScaleIO volumes
 
+## Usage
+
 Invoking the script with no arguments, or -h, whill show usage:
 ```
 usage: list-sio-volumes.py [-h] --os_auth_url OS_AUTH_URL
@@ -30,13 +32,15 @@ optional arguments:
 
 ```
 
-Notes:
+## Notes:
+
 For Newton and Ocata, the OS_AUTH_URL should be the v2.0 URL:
 http://<ipaddress>:5000/v2.0
 
 For Pike, the OS_AUTH_URL should be in the form of:
 http://<ipaddress>/identity
 
+## Requirements
 
 Requires a few python modules which can be installed via pip
 ```
