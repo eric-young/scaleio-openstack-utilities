@@ -2,6 +2,7 @@
 
 Utility to list the mappings between OpenStack and ScaleIO volumes
 
+
 ## Usage
 
 Invoking the script with no arguments, or -h, whill show usage:
@@ -32,13 +33,15 @@ optional arguments:
 
 ```
 
-## Notes:
+
+## Notes
 
 For Newton and Ocata, the OS_AUTH_URL should be the v2.0 URL:
-http://<ipaddress>:5000/v2.0
+http://ipaddress:5000/v2.0
 
 For Pike, the OS_AUTH_URL should be in the form of:
-http://<ipaddress>/identity
+http://ipaddress/identity
+
 
 ## Requirements
 
